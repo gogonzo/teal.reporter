@@ -80,11 +80,13 @@ jobs:
       !contains(github.event.commits[0].message, '[skip checks]')
     steps:
       # run 
-      - name: Checkout tools repo
+      - name: Checkout R-macos/recipes 🛎
         uses: actions/checkout@v4
         with:
           repository: R-macos/recipes
           path: receipes
+        
+      - name: Install R-macos/recipes 🛎
         run: ./build.sh all
 
       - name: Checkout repository 🛎

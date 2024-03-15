@@ -87,7 +87,7 @@ jobs:
           path: receipes
         
       - name: Install R-macos/recipes 🛎
-        run: ./build.sh all
+        run: receipes/build.sh all
 
       - name: Checkout repository 🛎
         uses: actions/checkout@v4

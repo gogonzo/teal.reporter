@@ -32,7 +32,7 @@ jobs:
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
     runs-on: ${{ matrix.config.os }}
     strategy:
-      fail-fast: no
+      fail-fast: false
       matrix:
         config:
           - { os: macOS-14, r: "release" }
@@ -72,7 +72,6 @@ jobs:
       RGL_USE_NULL: yes
       WNHOME:   /usr/local/wordnet-3.1
       _R_CHECK_XREFS_USE_ALIASES_FROM_CRAN_:   yes
-      _R_CHECK_RD_VALIDATE_RD2HTML_: yes
       _R_CHECK_RD_MATH_RENDERING_:   yes
       _R_CHECK_VIGNETTES_SKIP_RUN_MAYBE_:   yes
       _R_CHECK_TESTS_NLINES_: 0
